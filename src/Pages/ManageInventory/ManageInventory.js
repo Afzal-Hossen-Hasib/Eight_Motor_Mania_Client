@@ -20,7 +20,7 @@ const ManageInventory = () => {
                         <div>
                             <p>{name}</p>
                             <p>{price}</p>
-                            <button>Update</button>
+                            <button>Delete</button>
                         </div>
                     )
                 })

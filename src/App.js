@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import Header from './Pages/SharedPages/Header/Header';
 import Footer from './Pages/SharedPages/Footer/Footer';
@@ -8,6 +7,7 @@ import Blog from './Pages/SharedPages/Blog/Blog';
 import Login from './Pages/Login/Login/Login';
 import ErrorPage from './Pages/SharedPages/ErrorPage/ErrorPage';
 import ManageInventory from './Pages/ManageInventory/ManageInventory';
+import UpdateInventory from './Pages/UpdateInventory/UpdateInventory';
 
 function App() {
   return (
@@ -16,9 +16,10 @@ function App() {
      <Routes>
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/blog' element={<Blog></Blog>}></Route>
+        <Route path='/inventory/:id' element={<UpdateInventory></UpdateInventory>}></Route> 
         <Route path='/login' element={<Login></Login>}></Route>
         {/* <Route path='/register' element={<UserSignUp></UserSignUp>}></Route> */}
-        <Route path='/inventory' element={<ManageInventory></ManageInventory>}></Route>
+        <Route path='/manageinventory' element={<ManageInventory></ManageInventory>}></Route>
         <Route path='*' element={<ErrorPage></ErrorPage>}></Route>
      </Routes>
      <Footer></Footer>
