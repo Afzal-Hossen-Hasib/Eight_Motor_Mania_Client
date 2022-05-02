@@ -7,6 +7,7 @@ import Home from './Pages/Home/Home/Home';
 import Blog from './Pages/SharedPages/Blog/Blog';
 import Login from './Pages/Login/Login/Login';
 import ErrorPage from './Pages/SharedPages/ErrorPage/ErrorPage';
+import ManageInventory from './Pages/ManageInventory/ManageInventory';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path='/blog' element={<Blog></Blog>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         {/* <Route path='/register' element={<UserSignUp></UserSignUp>}></Route> */}
+        <Route path='/inventory' element={<ManageInventory></ManageInventory>}></Route>
         <Route path='*' element={<ErrorPage></ErrorPage>}></Route>
      </Routes>
      <Footer></Footer>
