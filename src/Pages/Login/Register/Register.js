@@ -68,11 +68,11 @@ const Register = () => {
                   <Form.Label>Password</Form.Label>
                   <Form.Control ref={passwordRef} type="password" placeholder="Password" required/>
                 </Form.Group>
-                {/* <Form.Group className="mb-3" controlId="formBasicCheckbox">
+                <Form.Group className="mb-3" controlId="formBasicCheckbox">
                   <Form.Check type="checkbox" label="Check me out" />
-                </Form.Group> */}
-                <Button variant="primary" type="submit">
-                  Submit
+                </Form.Group>
+                <Button variant="primary w-100" type="submit">
+                  Register
                 </Button>
               </Form>
               <p>Already Have An Account? <span onClick={handleLogin}>Please Login</span></p>

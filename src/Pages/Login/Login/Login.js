@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { Button, Form } from "react-bootstrap";
-import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { useLocation, useNavigate } from "react-router-dom";
 import auth from "../../../firebase.init";
 import login from "../../../Images/icon/01.png";
@@ -24,6 +24,8 @@ const Login = () => {
     error,
   ] = useSignInWithEmailAndPassword(auth);
 
+  const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail (auth);
+
   if (user) {
     navigate(from, { replace: true });
   }
@@ -45,6 +47,12 @@ const Login = () => {
 
   const navigateRegister = event => {
     navigate ('/register')
+  }
+
+  const resetPassword = async() => {
+    const email = emailRef.current.value;
+    await sendPasswordResetEmail(email);
+    alert('Sent email');
   }
 
   return (
@@ -76,15 +84,13 @@ const Login = () => {
                   <Form.Label>Password</Form.Label>
                   <Form.Control ref={passwordRef} type="password" placeholder="Password" required/>
                 </Form.Group>
-                {/* <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                  <Form.Check type="checkbox" label="Check me out" />
-                </Form.Group> */}
-                <Button variant="primary" type="submit">
-                  Submit
+                <Button variant="primary w-100" type="submit">
+                  Log In
                 </Button>
               </Form>
               {errorHandle}
               <p>New To Motor Mania? <span className="register-button" onClick={navigateRegister}>Please Register</span></p>
+              <p>Forgot Password? <span className="register-button" onClick={resetPassword}>Reset Password</span></p>
               <SocialLogin></SocialLogin>
             </div>
           </div>
