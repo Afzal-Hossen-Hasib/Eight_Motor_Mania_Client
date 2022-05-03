@@ -1,26 +1,25 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import useInventory from '../../hooks/useInventory';
 
 const ManageInventory = () => {
-
-    const [inventory, setInventory] = useState([]);
-
-    useEffect (() => {
-        fetch('data.json')
-        .then (res => res.json())
-        .then (data => setInventory(data));
-    }, [])
+    const [inventory, setInventory] = useInventory ();
+    const navigate = useNavigate();
+        const handleInventory = id => {
+            navigate (`/inventory/${id}`)
+        }
 
     return (
         <div>
-            <h1>Inventory:{inventory.length}</h1>
+            <h1>Manage Inventory:</h1>
             {
-                inventory.map(item => {
-                    const {name, price} = item;
+                inventory.map(manage => {
+                    const {name, price, id} = manage
                     return (
                         <div>
                             <p>{name}</p>
                             <p>{price}</p>
-                            <button>Delete</button>
+                            <button onClick={()=> handleInventory(id)}>Update</button>
                         </div>
                     )
                 })
