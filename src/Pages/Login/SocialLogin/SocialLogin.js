@@ -1,23 +1,28 @@
 import React from 'react';
 import google from '../../../Images/Social/google.png'
 import github from '../../../Images/Social/github.png'
-import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { useSignInWithGithub, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 import { useNavigate } from 'react-router-dom';
 
 const SocialLogin = () => {
-    const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
+
+    const [signInWithGoogle, googleUser, googleLoading, googleError] = useSignInWithGoogle(auth);
+
+    const [signInWithGithub, githubUser, githubLoading, githubError] = useSignInWithGithub(auth);
+
     const naviagte = useNavigate();
+
     let errorHandle;
 
-    if (error) {
+    if (googleError || githubError) {
         
         errorHandle = <div>
-            <p className='text-danger'>Error: {error.message}</p>
+            <p className='text-danger'>Error: {googleError?.message} {githubError?.message}</p>
           </div>
       };
 
-      if (user) {
+      if (googleUser || githubUser) {
         naviagte ('/home');
       }
 
@@ -37,7 +42,7 @@ const SocialLogin = () => {
             </div>
 
             <div className='mt-5'>
-                <button className='btn btn-info w-100'>
+                <button onClick={()=> signInWithGithub()} className='btn btn-info w-100'>
                     <img style={{width: '30px'}} src={github} alt="" />
                     <span className='px-2'>Github Sign In</span>
                 </button>

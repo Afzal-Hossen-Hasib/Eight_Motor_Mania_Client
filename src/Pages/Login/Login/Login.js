@@ -15,6 +15,8 @@ const Login = () => {
 
   let from = location.state?.from?.pathname || "/";
 
+  let errorHandle;
+
   const [
     signInWithEmailAndPassword,
     user,
@@ -25,6 +27,13 @@ const Login = () => {
   if (user) {
     navigate(from, { replace: true });
   }
+
+  if (error) {
+        
+    errorHandle = <div>
+        <p className='text-danger'>Error: {error?.message}</p>
+      </div>
+  };
 
   const handleFormSubmit = event => {
     event.preventDefault ();
@@ -74,6 +83,7 @@ const Login = () => {
                   Submit
                 </Button>
               </Form>
+              {errorHandle}
               <p>New To Motor Mania? <span className="register-button" onClick={navigateRegister}>Please Register</span></p>
               <SocialLogin></SocialLogin>
             </div>
