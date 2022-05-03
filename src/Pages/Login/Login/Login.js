@@ -4,6 +4,7 @@ import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { useLocation, useNavigate } from "react-router-dom";
 import auth from "../../../firebase.init";
 import login from "../../../Images/icon/01.png";
+import SocialLogin from "../SocialLogin/SocialLogin";
 import "./Login.css";
 
 const Login = () => {
@@ -74,6 +75,7 @@ const Login = () => {
                 </Button>
               </Form>
               <p>New To Motor Mania? <span className="register-button" onClick={navigateRegister}>Please Register</span></p>
+              <SocialLogin></SocialLogin>
             </div>
           </div>
         </div>
