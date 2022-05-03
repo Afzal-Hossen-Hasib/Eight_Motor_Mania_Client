@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import icon from '../../../Images/icon/01.png'
@@ -7,6 +7,8 @@ import auth from '../../../firebase.init';
 import SocialLogin from '../SocialLogin/SocialLogin';
 
 const Register = () => {
+
+        const [agree, setAgree] = useState(false);
         const nameRef = useRef('');
         const emailRef = useRef('');
         const passwordRef = useRef ('');
@@ -29,7 +31,9 @@ const Register = () => {
             const email = emailRef.current.value;
             const password = passwordRef.current.value;
 
-            createUserWithEmailAndPassword(email, password);
+            if (agree) {
+              createUserWithEmailAndPassword(email, password);
+            }
         };
 
        const handleLogin = () => {
@@ -69,13 +73,13 @@ const Register = () => {
                   <Form.Control ref={passwordRef} type="password" placeholder="Password" required/>
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                  <Form.Check type="checkbox" label="Check me out" />
+                  <Form.Check onClick={() => setAgree(!agree)} type="checkbox" name='terms' label="Accept Terms And Conditions" />
                 </Form.Group>
-                <Button variant="primary w-100" type="submit">
+                <Button disabled={!agree} variant="primary w-100" type="submit">
                   Register
                 </Button>
               </Form>
-              <p>Already Have An Account? <span onClick={handleLogin}>Please Login</span></p>
+              <p className='mt-3'>Already Have An Account? <span onClick={handleLogin}>Please Login</span></p>
               <SocialLogin></SocialLogin>
             </div>
           </div>
