@@ -5,6 +5,7 @@ import icon from '../../../Images/icon/01.png'
 import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 import SocialLogin from '../SocialLogin/SocialLogin';
+import Loading from '../../SharedPages/Loading/Loading';
 
 const Register = () => {
 
@@ -22,6 +23,10 @@ const Register = () => {
           ] = useCreateUserWithEmailAndPassword(auth, {sendEmailVerification: true});
 
           const [updateProfile, updating, updateError] = useUpdateProfile(auth);
+
+          if (loading || updating) {
+            return <Loading></Loading> 
+          }
 
           if (user) {
               console.log ('user', user)

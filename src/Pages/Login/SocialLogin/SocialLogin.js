@@ -4,6 +4,7 @@ import github from '../../../Images/Social/github.png'
 import { useSignInWithGithub, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 import { useNavigate } from 'react-router-dom';
+import Loading from '../../SharedPages/Loading/Loading'
 
 const SocialLogin = () => {
 
@@ -14,6 +15,10 @@ const SocialLogin = () => {
     const naviagte = useNavigate();
 
     let errorHandle;
+
+    if (googleLoading || githubLoading) {
+        return <Loading></Loading>
+    }
 
     if (googleError || githubError) {
         
