@@ -1,0 +1,42 @@
+.delete-button {
+    background-color: #e52727;
+    text-decoration: none;
+    list-style: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    color: white;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    border: none;
+    text-transform: uppercase;
+    transition: transform 0.5s;
+}
+
+.inventory-item img {
+    width: 100%;
+    transition: transform 0.5s;
+}
+
+.inventory-item:hover img {
+    transform: scale(.9);
+}
+
+.delete-button:hover {
+    transform: scale(.9);
+}
+
+@media only screen and (max-width: 576px) {
+    .inventory-section {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .inventory-item {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 577px) and (max-width: 992px) {
+    .inventory-section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

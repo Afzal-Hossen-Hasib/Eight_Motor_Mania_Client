@@ -45,5 +45,10 @@
     color: #000000;
     border-radius: 5px;
     margin-top: 25px;
+    box-shadow: rgba(241, 234, 234, 0.35) 0px 5px 15px;
+    transition: transform 0.5s;
 }
 
+.third-section a:hover {
+    transform: scale(.9);
+}

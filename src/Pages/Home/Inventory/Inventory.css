@@ -21,6 +21,24 @@
     transform: scale(.9);
 }
 
+.update-button {
+    background-color: #fde148;
+    text-decoration: none;
+    list-style: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    color: #000000;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    border: none;
+    text-transform: uppercase;
+    transition: transform 0.5s;
+}
+
+.update-button:hover {
+    transform: scale(.9);
+}
+
 .manage-button {
     display: flex;
     align-items: center;
@@ -30,16 +48,17 @@
 .manage-button a{
     text-decoration: none;
     list-style: none;
-    color: black;
+    color: white;
     font-size: 20px;
-    background-color: red;
+    background-color: #e52727;
     padding: 10px 20px;
     border-radius: 10px;
+    text-transform: uppercase;
+    transition: transform 0.5s;
 }
 
 .manage-button a:hover {
-    background-color: aqua;
-    color: orange;
+    transform: scale(.9);
 }
 
 @media only screen and (max-width: 576px) {

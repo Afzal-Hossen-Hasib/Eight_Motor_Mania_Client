@@ -29,11 +29,26 @@ function App() {
         }></Route> 
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
-        {/* <Route path='/register' element={<UserSignUp></UserSignUp>}></Route> */}
-        <Route path='/manageinventory' element={<ManageInventory></ManageInventory>}></Route>
-        <Route path='/manageitem' element={<ManageItem></ManageItem>}></Route>
-        <Route path='/myitem' element={<MyItem></MyItem>}></Route>
-        <Route path='/additem' element={<AddItem></AddItem>}></Route>
+        <Route path='/manageinventory' element={
+          <PrivateRoute>
+            <ManageInventory></ManageInventory>
+          </PrivateRoute>
+        }></Route>
+        <Route path='/manageitem' element={
+          <PrivateRoute>
+            <ManageItem></ManageItem>
+          </PrivateRoute>
+        }></Route>
+        <Route path='/myitem' element={
+          <PrivateRoute>
+            <MyItem></MyItem>
+          </PrivateRoute>
+        }></Route>
+        <Route path='/additem' element={
+          <PrivateRoute>
+            <AddItem></AddItem>
+          </PrivateRoute>
+        }></Route>
         <Route path='*' element={<ErrorPage></ErrorPage>}></Route>
      </Routes>
      <Footer></Footer>

@@ -1,6 +1,7 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import useInventory from '../../hooks/useInventory';
+import './ManageInventory.css'
 
 const ManageInventory = () => {
     const [inventory, setInventory] = useInventory ();
@@ -27,21 +28,26 @@ const ManageInventory = () => {
         }
 
     return (
-        <div>
-            <h1>Manage Inventory:</h1>
+        <div className='container'>
+            <h1>Manage Inventory</h1>
+            <div className='inventory-section'>
             {
                 inventory.map(manage => {
-                    const {name, price, _id} = manage
+                    const {name, price, img, desription, supplier, quantity, _id} = manage
                     return (
-                        <div key={manage._id}>
-                            <p>{name}</p>
+                        <div key={manage._id} className='inventory-item'>
+                            <img src={img} alt="" />
+                            <h2>{name}</h2>
                             <p>{price}</p>
-                            <div>
-                            <button onClick={()=> handleInventory(_id)}>Update</button>
+                            <p>{quantity}</p>
+                            <p>{desription}</p>
+                            <p>{supplier}</p>
+                            <div className='ps-5'>
+                            <button className='update-button' onClick={()=> handleInventory(_id)}>Update</button>
 
                             <button
                             onClick={() => handleDelete(manage._id)} 
-                            className='ms-3'>
+                            className='ms-3 delete-button'>
                                 Delete
                             </button>
                             </div>
@@ -49,6 +55,10 @@ const ManageInventory = () => {
                     )
                 })
             }
+            </div>
+            <div className='manage-button'>
+            <Link to='/additem'>Add New Item</Link>
+            </div>
         </div>
     );
 };
