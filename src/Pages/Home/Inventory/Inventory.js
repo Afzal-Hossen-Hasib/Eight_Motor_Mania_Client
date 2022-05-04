@@ -15,7 +15,7 @@ const Inventory = () => {
             <h1>inventory: </h1>
             {
                 newInventory.map (inventories => {
-                    const {name, price, img, desription, supplier, quantity, id} = inventories
+                    const {name, price, img, desription, supplier, quantity, _id} = inventories
                     return (
                         <div>   
                             <img src={img} alt="" />
@@ -24,7 +24,7 @@ const Inventory = () => {
                             <p>{quantity}</p>
                             <p>{desription}</p>
                             <p>{supplier}</p>
-                            <button onClick={()=> handleUpdateInventory(id)}>Update</button>
+                            <button onClick={()=> handleUpdateInventory(_id)}>Update</button>
                         </div>
 
                     )

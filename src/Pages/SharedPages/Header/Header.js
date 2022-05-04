@@ -28,12 +28,12 @@ const Header = () => {
       {
         user ?
 
-          <div>
+          <Nav>
             <Nav.Link  as={Link} to="/manageitem">ManageItem</Nav.Link>
             <Nav.Link  as={Link} to="/myitem">MyItem</Nav.Link>
             <Nav.Link  as={Link} to="/additem">AddItem</Nav.Link>
             <Nav.Link  onClick={handleSignOut}>Log Out</Nav.Link>
-          </div>
+          </Nav>
         :
 
         <Nav.Link  as={Link} to="/login">
