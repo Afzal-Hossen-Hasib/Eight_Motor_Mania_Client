@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import useInventory from '../../../hooks/useInventory';
+import './Inventory.css'
 
 const Inventory = () => {
         const [inventory, setInventory] = useInventory ();
@@ -11,26 +12,30 @@ const Inventory = () => {
         }
 
     return (
-        <div>
-            <h1>inventory: </h1>
+        <div> 
+            <div className='container'>
+                <h1>Inventory</h1>
+            <div className='inventory-section'>
             {
                 newInventory.map (inventories => {
                     const {name, price, img, desription, supplier, quantity, _id} = inventories
                     return (
-                        <div>   
+                        <div className='inventory-item'>   
                             <img src={img} alt="" />
-                            <p>{name}</p>
+                            <h2>{name}</h2>
                             <p>{price}</p>
                             <p>{quantity}</p>
                             <p>{desription}</p>
                             <p>{supplier}</p>
-                            <button onClick={()=> handleUpdateInventory(_id)}>Update</button>
+                            <button className='d-block mx-auto w-50' onClick={()=> handleUpdateInventory(_id)}>Update</button>
                         </div>
 
                     )
                 })
             }
+            </div>
             <Link to='/manageinventory'>Manage Inventory</Link>
+            </div>
         </div>
     );
 };

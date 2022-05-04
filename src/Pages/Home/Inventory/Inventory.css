@@ -1,7 +1,32 @@
-.inventory {
+.inventory-section {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     margin-top: 50px;
-    grid-gap: 50px;
-    padding: 0 50px;
+    grid-gap: 20px;
+}
+
+.inventory-item {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.inventory-item img {
+    width: 100%;
+}
+
+@media only screen and (max-width: 576px) {
+    .inventory-section {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .inventory-item {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 577px) and (max-width: 992px) {
+    .inventory-section {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
