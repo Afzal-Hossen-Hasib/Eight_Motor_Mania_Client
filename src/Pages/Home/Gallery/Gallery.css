@@ -1,0 +1,57 @@
+.gallery {
+    background-image: url('../../../Images/backgroud/background.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.image-card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-left: 120px;
+    
+}
+
+.card {
+    height: 250px;
+    border-radius: 10px;
+    padding: 15px 25px;
+    cursor: pointer;
+    margin: 10px;
+    background-position: center;
+    background-size: cover;
+    transition: transform 0.5s;
+}
+
+.card1 {
+    background-image: url('../../../Images/backgroud/helmet.jpg');
+}
+.card2 {
+    background-image: url('../../../Images/backgroud/jacket.jpeg');
+}
+.card3 {
+    background-image: url('../../../Images/backgroud/gloves.jpg');
+}
+.card4 {
+    background-image: url('../../../Images/backgroud/boot.jpg');
+}
+
+.image-card h5 {
+    color: white;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+
+@media only screen and (max-width: 576px) {
+    .image-card {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media only screen and (min-width: 577px) and (max-width: 992px) {
+    .image-card {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

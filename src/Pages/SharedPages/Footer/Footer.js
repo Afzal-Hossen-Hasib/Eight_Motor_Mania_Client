@@ -10,6 +10,7 @@ const Footer = () => {
     return (
          <footer >
                 <div>
+                    <h5 className='text-center text-white ps-5'>Follow Us</h5>
                     <ul className='social-icon'>
                         <li> <a href=""><ion-icon name="logo-facebook"></ion-icon></a> </li>
                         <li> <a href=""><ion-icon name="logo-twitter"></ion-icon></a> </li>
