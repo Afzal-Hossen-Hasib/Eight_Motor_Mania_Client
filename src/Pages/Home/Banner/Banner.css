@@ -1,8 +1,10 @@
-.banner h3 {
-    color: orangered;
-    font-size: 40px;
+.banner h4 {
+    background-color: #e52727;
+    color: white;
+    font-size: 30px;
+    display: inline-block;
 }
 
 .banner p {
-    font-size: 17px;
+    font-size: 20px;
 }

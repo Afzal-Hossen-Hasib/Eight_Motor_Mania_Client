@@ -22,8 +22,8 @@ const Banner = () => {
           alt="First slide"
         />
         <Carousel.Caption>
-          <h3>LET'S GET FIT..</h3> 
-          <p>Take The First Step To Success.</p>
+          <h4>WE CONTINUE TO RIDE WITH YOU</h4> 
+          <p>Level Up Your Gear</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -34,8 +34,8 @@ const Banner = () => {
         />
 
         <Carousel.Caption>
-          <h3>LET'S GET FIT..</h3> 
-          <p>Take The First Step To Success.</p>
+        <h4>WE CONTINUE TO RIDE WITH YOU</h4> 
+          <p>Level Up Your Gear</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -46,8 +46,8 @@ const Banner = () => {
         />
 
         <Carousel.Caption>
-          <h3>LET'S GET FIT..</h3> 
-          <p>Take The First Step To Success.</p>
+        <h4>WE CONTINUE TO RIDE WITH YOU</h4> 
+          <p>Level Up Your Gear</p>
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>

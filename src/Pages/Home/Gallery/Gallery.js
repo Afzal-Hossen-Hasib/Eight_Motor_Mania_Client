@@ -4,12 +4,12 @@ import './Gallery.css'
 const Gallery = () => {
     return (
         <div className='mt-5'>
-            <div className='gallery'>
+            <div className='gallery pt-2'>
                 <div className='container'>
-                <h1 className='text-center'>Gallery</h1>
+                <h1 className='text-center mt-5'>YOU MAY BE INTERESTED</h1>
                 <div>
                 <h1>Motor Mania</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse illo earum cupiditate, sunt aspernatur laborum quas rem cum nulla voluptate et pariatur quia iste! Est cumque error itaque mollitia praesentium.</p>
+                        <p>In the new Motor Mania web you'll find the greatest online sales stock for motorcycle accessories and gear. Our maximum guarantee is the trust that the best brands of road and off-road gear have deposited in us.</p>
                 </div>
 
                 <div className='image-card'>
@@ -30,7 +30,7 @@ const Gallery = () => {
                         <p>Lorem ipsum dolor sit amet consectetur.</p>
                     </div>
                 </div>
-                <button className='w-25 d-block mx-auto'>See More..</button>
+                <button className='mt-5 w-25 d-block mx-auto'>See More..</button>
                 </div>
                 
                 

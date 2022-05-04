@@ -14,7 +14,7 @@ const Inventory = () => {
     return (
         <div> 
             <div className='container'>
-                <h1>Inventory</h1>
+                <h1 className='text-center mt-5'>CHOOSE YOUR RIDING STYLE</h1>
             <div className='inventory-section'>
             {
                 newInventory.map (inventories => {
@@ -34,7 +34,9 @@ const Inventory = () => {
                 })
             }
             </div>
+            <div className='manage-button'>
             <Link to='/manageinventory'>Manage Inventory</Link>
+            </div>
             </div>
         </div>
     );
