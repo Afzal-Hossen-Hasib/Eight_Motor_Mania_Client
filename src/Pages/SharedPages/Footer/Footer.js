@@ -8,23 +8,27 @@ const Footer = () => {
     const year = today.getFullYear();
 
     return (
-         <footer className='footer-section'>
-                <div className='footer'>
-                    <ul className='footer-list'>
-                    <li>
-                        <a href="#home">Home</a>
-                    </li>
-                    <li>
-                        <a href="#services">Services</a>
-                    </li>
-                    <li>
-                        <Link to='/about'>About</Link>
-                    </li>
+         <footer >
+                <div>
+                    <ul className='social-icon'>
+                        <li> <a href=""><ion-icon name="logo-facebook"></ion-icon></a> </li>
+                        <li> <a href=""><ion-icon name="logo-twitter"></ion-icon></a> </li>
+                        <li> <a href=""><ion-icon name="logo-linkedin"></ion-icon></a> </li>
+                        <li> <a href=""><ion-icon name="logo-instagram"></ion-icon></a> </li>
                     </ul>
-                    <p className='footer-title'>Motor <span>Mania</span> &#169; {year}</p>
+                    
+                    <ul className='menu'>
+                        <li><a href="">Home</a></li>
+                        <li><a href="">Inventory</a></li>
+                        <li><a href="">Blog</a></li>
+                        <li><a href="">Contact</a></li>
+                    </ul>
+
+                    <p> &#169; {year} Motor Mania || All Rights Reserved</p>
                 </div> 
             </footer>
     );
 };
+
 
 export default Footer;
