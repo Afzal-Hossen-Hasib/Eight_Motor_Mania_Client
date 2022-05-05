@@ -6,27 +6,33 @@ const Blog = () => {
         <div className="container">
       <h1 className="qna-title text-center mb-5">QNA SECTION</h1>
       <div className="qna-section">
-        <h3>Difference between Authorization and Authentication? <hr /></h3>
+        <h3>Difference between javascript and node js? <hr /></h3>
         <p>
-          <span>ANSWER: Authorization:</span> Authorization happens after a
-          user’s identity has been successfully authenticated. It is about
-          offering full or partial access rights to resources like database,
-          funds, and other critical information to get the job done. In an
-          organization, for example, after an employee is verified and confirmed
-          via ID and password authentication, the next step would be defining
-          what resources the employee would have access to. </p>
-          <p> <span>Authentication:</span> Authentication is the process of identifying users and validating who they claim to be. One of the most common and obvious factors to authenticate identity is a password. If the user name matches the password credential, it means the identity is valid, and the system grants access to the user.
+          <span>ANSWER: JavaScript:</span> Lightweight, interpreted, object-oriented language with first-class functions. JavaScript is most known as the scripting language for Web pages, but used in many non-browser environments as well such as node.js or Apache CouchDB. It is a prototype-based, multi-paradigm scripting language that is dynamic,and supports object-oriented, imperative, and functional programming styles. Javascript is a high-level language with simple syntax and smooth learning curves that make writing, reading, and maintenance easier. Javascript supports many libraries, so many hosting providers support this language. You can also work with it from any computer. </p>
+
+          <p> <span>Node.js:</span> A platform built on Chrome's JavaScript runtime for easily building fast, scalable network applications. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient, perfect for data-intensive real-time applications that run across distributed devices. Ability to use the same language on the client and server-side.The lightness of the system that allows creating lightweight applications.
         </p>
       </div>
 
       <div className="qna-section">
-          <h3>What other services does firebase provide other than authentication? <hr /></h3>
-          <p><span>ANSWER:</span> Firebase console can be used to view data in both databases. Firebase Authentication provides backend services, easy-to-use SDKs, and ready-made UI libraries to authenticate users to your app. There are many services which Firebase provides, Most useful of them are other than authentication. Like Cloud Firestore, Cloud Functions, Hosting, Cloud Storage, Google Analytics, Predictions, Cloud Messaging, Dynamic Links, Remote Config. Firebase is a full package that can help in developing mobile or web applications faster with fewer resources and more efficiency.</p>
+          <h3>When should you use nodejs and when should you use mongodb? <hr /></h3>
+          <p><span>ANSWER:</span> Node.js is a Javascript-based environment that is easily understood by most of the browsers. Here, the Javascript is Server-Side instead of serving client-side. Node.js is definitely fast and it allows to explore a dynamic range of data at real-time. It allows code sharing. Node.js acts as a proxy server and allows seamless real-time data streaming. The most important reason for the rising popularity of Node.js is that the programmer can code the server-side as well as client-side using it. Node.js is an interpreted, familiar and flexible language.</p>
       </div>
 
       <div className="qna-section">
-          <h3>Why are you using firebase? What other options do you have to implement authentication? <hr /></h3>
-          <p><span>ANSWER:</span> Firebase Authentication provides backend services, easy-to-use SDKs, and ready-made UI libraries to authenticate users to your app. It supports authentication using passwords, phone numbers, popular federated identity providers like Google, Facebook and Twitter, and more. Firebase Authentication makes it easier to get your users signed-in without having to understand the complexities behind implementing your own authentication system.</p>
+          <h3>Differences between sql and nosql databases? <hr /></h3>
+          <p>
+          <span>ANSWER: SQL:</span> SQL database is generally classified as a Relational database i.e. RDBMS. As we already know SQL uses structured query language for its CRUD operation which is defined as SQL. This makes SQL database to store data in more structured form and also preferred for more complex operations which could get completed with complex SQL queries. SQL database can extends its capacity on single server by increasing things like RAM, CPU or SSD i.e we can say that SQL dbs could be scalable in vertical as their storage could be increase for the same server by enhancing its storage components. SQL dbs is implemented in both open source and commercial Database such as like Postgres & MySQL as open source and Oracle and Sqlite as commercial.</p>
+
+          <p> <span>NOSQL:</span> While NOSQL database is known as non-relational or distributed database. NoSQL database on other hand has dynamic schema for unstructured data.Data stored in this type of database is not structured and could be stored in either of forms such as document-oriented, column-oriented, graph-based or organized as a KeyValue store. This syntax can be varied from DB to DB. In order to increase the capacity of NOSQL dbs we required to install new servers parallel to the parent server i.e NOSQL dbs could be scalable in horizontal and this made them more preferable choice for large or ever-changing data sets. On other hand NOSQL is purely open source and MongoDB, BigTable, Redis, RavenDB, Cassandra, Hbase, Neo4j, CouchDB are the main implementation of it.
+        </p>
+      </div>
+
+      <div className="qna-section">
+          <h3>What is the purpose of jwt and how does it work? <hr /></h3>
+          <p>
+          <span>ANSWER:</span> JSON Web Tokens (JWTs) supports authorization and information exchange. One common use case is for allowing clients to preserve their session information after logging in. By storing the session information locally and passing it to the server for authentication when making requests, the server can trust that the client is a registered user. JWTs are an excellent fit for REST API authentication. A user logs in to an application with a username and password, or otherwise proves her identity. The server confirms her identity and sends back an access token containing a reference to her identity (e.g. a private key pointing to a unique User instance). The client then includes this access token with every request to the server. A JWT’s characteristics make it a great choice for token-based authentication.
+        </p>
       </div>
     </div>
     );

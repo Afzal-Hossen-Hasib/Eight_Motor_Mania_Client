@@ -1,6 +1,6 @@
 .qna-title {
     background-color: black;
-    color: orangered;
+    color: #fde148;
     padding: 10px 0;
 }
 
@@ -16,6 +16,6 @@
 }
 
 .qna-section span {
-    color: orangered;
+    color: #e52727;
     font-weight: bold;
 }
