@@ -31,7 +31,6 @@ const AddItem = () => {
         const {data} = response;
         if (data.insertedId) {
           toast('New Item Added');
-
         }
       })
     };

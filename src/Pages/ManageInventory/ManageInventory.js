@@ -25,7 +25,7 @@ const ManageInventory = () => {
                     setInventory (remaining);
                 })
             }
-        }
+        };
 
     return (
         <div className='container'>
