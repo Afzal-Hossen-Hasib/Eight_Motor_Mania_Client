@@ -6,7 +6,7 @@ import auth from "../../../firebase.init";
 import login from "../../../Images/icon/01.png";
 import Loading from "../../SharedPages/Loading/Loading";
 import SocialLogin from "../SocialLogin/SocialLogin";
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import axios from 'axios';
 import "./Login.css";
@@ -105,7 +105,6 @@ const Login = () => {
               <p className="text-center my-3">New To Motor Mania? <span className="register-button" onClick={navigateRegister}>Please Register</span></p>
               <p className="text-center">Forgot Password? <span className="register-button" onClick={resetPassword}>Reset Password</span></p>
               <SocialLogin></SocialLogin>
-              <ToastContainer />
             </div>
           </div>
         </div>

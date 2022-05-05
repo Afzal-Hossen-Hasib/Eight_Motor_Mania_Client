@@ -5,27 +5,23 @@ import auth from '../../firebase.init';
 
 const MyItem = () => {
 
-    const [user] = useAuthState(auth);
+    const [user] = useAuthState(auth); 
+    const [myItem, setMyItem] = useState ([]);
 
-    const [myItem, setMyItem] = useState([]);
     useEffect (() => {
-
-        const getMyItem = async() => {
-            const email = user.email;
-            const url = `http://localhost:5000/myitem?email=${email}`;
-            const {data} = await axios.get (url, {
-                headers: {
-                    authorization: `Bearer ${localStorage.getItem('jwtToken')}` 
-                }
-            });
-            setMyItem(data);
+        const getNewItem = async() => {
+        const url = `http://localhost:5000/myitem`;
+        const {data} = await axios.get(url);
+        setMyItem(data);
         }
-        getMyItem();
-
+        getNewItem();
     } ,[user]);
+    
     return (
         <div>
             <h1>My Item{myItem.length}</h1> 
+            <p>{myItem.name}</p>
+            <button>Delete</button>
         </div>
     );
 };

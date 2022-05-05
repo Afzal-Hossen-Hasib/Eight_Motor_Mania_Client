@@ -13,6 +13,7 @@ import PrivateRoute from './Pages/Login/PrivateRoute/PrivateRoute';
 import ManageItem from './Pages/ManageItem/ManageItem';
 import MyItem from './Pages/MyItem/MyItem';
 import AddItem from './Pages/AddItem/AddItem';
+import { ToastContainer } from 'react-toastify';
 
 function App() {
   return (
@@ -52,6 +53,7 @@ function App() {
         <Route path='*' element={<ErrorPage></ErrorPage>}></Route>
      </Routes>
      <Footer></Footer>
+     <ToastContainer />
 
 
       {/* <p>
