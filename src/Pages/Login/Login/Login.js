@@ -8,6 +8,7 @@ import Loading from "../../SharedPages/Loading/Loading";
 import SocialLogin from "../SocialLogin/SocialLogin";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import axios from 'axios';
 import "./Login.css";
 
 const Login = () => {
@@ -34,7 +35,7 @@ const Login = () => {
   }
 
   if (user) {
-    navigate(from, { replace: true });
+    // navigate(from, { replace: true });
   }
 
   if (error) {
@@ -44,12 +45,15 @@ const Login = () => {
       </div>
   };
 
-  const handleFormSubmit = event => {
+  const handleFormSubmit = async event => {
     event.preventDefault ();
     const email = emailRef.current.value;
     const password = passwordRef.current.value;
     
-    signInWithEmailAndPassword(email, password);
+    await signInWithEmailAndPassword(email, password);
+    const {data} = await axios.post('http://localhost:5000/login', {email});
+    localStorage.setItem('jwtToken', data.jwtToken); 
+    navigate(from, { replace: true });
   }
 
   const navigateRegister = event => {
@@ -69,7 +73,7 @@ const Login = () => {
 
   return (
     <div className="container">
-      <h4 className="text-center fitness-title mb-4">
+      <h4 className="text-center title w-50 d-block mx-auto text-center my-4">
         Please Login
         <hr />
       </h4>
@@ -84,25 +88,22 @@ const Login = () => {
           <div className="col-md-6">
             <div className="right-cont">
               <Form onSubmit={handleFormSubmit}>
-                <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Group className="mb-5" controlId="formBasicEmail">
                   <Form.Label>Email address</Form.Label>
                   <Form.Control ref={emailRef} type="email" placeholder="Enter email" required/>
-                  <Form.Text className="text-muted">
-                    We'll never share your email with anyone else.
-                  </Form.Text>
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formBasicPassword">
                   <Form.Label>Password</Form.Label>
                   <Form.Control ref={passwordRef} type="password" placeholder="Password" required/>
                 </Form.Group>
-                <Button variant="primary w-100" type="submit">
+                <Button className="delete-button w-50 d-block mx-auto mt-4" variant="" type="submit">
                   Log In
                 </Button>
               </Form>
               {errorHandle}
-              <p>New To Motor Mania? <span className="register-button" onClick={navigateRegister}>Please Register</span></p>
-              <p>Forgot Password? <span className="register-button" onClick={resetPassword}>Reset Password</span></p>
+              <p className="text-center my-3">New To Motor Mania? <span className="register-button" onClick={navigateRegister}>Please Register</span></p>
+              <p className="text-center">Forgot Password? <span className="register-button" onClick={resetPassword}>Reset Password</span></p>
               <SocialLogin></SocialLogin>
               <ToastContainer />
             </div>

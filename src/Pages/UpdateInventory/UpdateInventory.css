@@ -1,0 +1,29 @@
+.left-row {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 5px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    transition: transform 0.5s;
+}
+
+.left-row:hover {
+    transform: translateY(-10px);
+}
+
+
+.left-row img {
+    width: 80%;
+    transition: transform 0.5s;
+}
+
+.left-row:hover img {
+    transform: scale(.9);
+}
+
+.right-row {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 5px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    transition: transform 0.5s;
+}

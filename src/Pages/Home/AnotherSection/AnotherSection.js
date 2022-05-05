@@ -8,7 +8,7 @@ const AnotherSection = () => {
             <table className='frist-section'>
                 <tr className='second-section'>
                     <td className='body-section'>
-                        <h2>Save Upto 50% On New Arrivals</h2>
+                        <h2>Save Upto 30% On New Arrivals</h2>
                     </td>
                 </tr>
 

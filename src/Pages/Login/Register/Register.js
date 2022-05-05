@@ -50,7 +50,7 @@ const Register = () => {
 
     return (
         <div className="container">
-            <h1>Please Register</h1>
+            <h1 className='title w-50 d-block mx-auto text-center my-4'>Please Register</h1>
             <div className="my-card">
         <div className="row">
           <div className="col-md-6">
@@ -62,32 +62,29 @@ const Register = () => {
           <div className="col-md-6">
             <div className="right-cont">
               <Form onSubmit={handleRegiter}>
-              <Form.Group className="mb-3">
-          <Form.Label className="name-title">Your Name</Form.Label>
+              <Form.Group className="mb-5">
+          <Form.Label className="name-title">Enter Name</Form.Label>
           <Form.Control ref={nameRef} type="text" 
           name="name" placeholder="Enter Name" />
         </Form.Group>
 
-                <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Group className="mb-5" controlId="formBasicEmail">
                   <Form.Label>Email address</Form.Label>
                   <Form.Control ref={emailRef} type="email" placeholder="Enter email" required/>
-                  <Form.Text className="text-muted">
-                    We'll never share your email with anyone else.
-                  </Form.Text>
                 </Form.Group>
 
-                <Form.Group className="mb-3" controlId="formBasicPassword">
+                <Form.Group className="mb-5" controlId="formBasicPassword">
                   <Form.Label>Password</Form.Label>
                   <Form.Control ref={passwordRef} type="password" placeholder="Password" required/>
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicCheckbox">
                   <Form.Check onClick={() => setAgree(!agree)} type="checkbox" name='terms' label="Accept Terms And Conditions" />
                 </Form.Group>
-                <Button disabled={!agree} variant="primary w-100" type="submit">
+                <Button disabled={!agree} className="delete-button w-50 d-block mx-auto mt-4" variant="" type="submit">
                   Register
                 </Button>
               </Form>
-              <p className='mt-3'>Already Have An Account? <span onClick={handleLogin}>Please Login</span></p>
+              <p className='mt-3'>Already Have An Account? <span className='register-button' onClick={handleLogin}>Please Login</span></p>
               <SocialLogin></SocialLogin>
             </div>
           </div>

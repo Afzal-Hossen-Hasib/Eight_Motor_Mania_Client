@@ -29,7 +29,7 @@ const ManageInventory = () => {
 
     return (
         <div className='container'>
-            <h1>Manage Inventory</h1>
+            <h1 className='title w-50 d-block mx-auto text-center mt-5'>Manage Inventory</h1>
             <div className='inventory-section'>
             {
                 inventory.map(manage => {
@@ -38,10 +38,10 @@ const ManageInventory = () => {
                         <div key={manage._id} className='inventory-item'>
                             <img src={img} alt="" />
                             <h2>{name}</h2>
-                            <p>{price}</p>
-                            <p>{quantity}</p>
-                            <p>{desription}</p>
-                            <p>{supplier}</p>
+                            <p>Quantity: {quantity}</p>
+                            <p>Price: ${price}</p>
+                            <p>Details: {desription}</p>
+                            <p>Supplier: {supplier}</p>
                             <div className='ps-5'>
                             <button className='update-button' onClick={()=> handleInventory(_id)}>Update</button>
 

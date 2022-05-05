@@ -10,6 +10,11 @@
     padding: 5px;
     border-radius: 10px;
     margin-bottom: 25px;
+    transition: transform 0.5s;
+}
+
+.inventory-item:hover {
+    transform: translateY(-10px);
 }
 
 .inventory-item img {

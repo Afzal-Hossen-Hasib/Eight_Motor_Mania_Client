@@ -1,8 +1,12 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
+import { useAuthState } from 'react-firebase-hooks/auth';
+import './AddItem.css'
+import auth from '../../firebase.init';
 
 const AddItem = () => {
 
+  const [user] = useAuthState(auth);
     const { register, handleSubmit } = useForm();
     const onSubmit = data => {
       console.log(data)
@@ -23,17 +27,18 @@ const AddItem = () => {
 
     return (
         <div className='container w-100 mx-auto'>
-            <h1>Add Item</h1>
-            <form className='d-flex flex-column' onSubmit={handleSubmit(onSubmit)}>
-                
-            <input className='mb-3' placeholder='Name' {...register("name", { required: true, maxLength: 20 })} />
-            <textarea className='mb-3' placeholder='Description' {...register("description")} />
-            <input className='mb-3' placeholder='Price' type="number" {...register("price")} />
+            <h1 className='text-center title w-50 d-block mx-auto text-center my-4'>Add New Item</h1>
+            <form className='d-flex flex-column add-cont' onSubmit={handleSubmit(onSubmit)}>
+            
+            <input className='w-50 d-block mx-auto mb-5' placeholder='Email' type="email" value={user?.email} {...register("email")} disabled/>
+            <input className='w-50 d-block mx-auto mb-5' placeholder='Product Name' {...register("name", { required: true, maxLength: 20 })} />
+            <textarea className='w-50 d-block mx-auto mb-5' placeholder='Desription' type="text" {...register("desription")} />
+            <input className='w-50 d-block mx-auto mb-5' placeholder='Price' type="number" {...register("price")} />
 
-            <input className='mb-3' placeholder='Quantity' type="number" {...register("quantity")} />
-            <input className='mb-3' placeholder='Supplier' type="text" {...register("supplier")} />
-            <input className='mb-3' placeholder='Photo URL' type="text" {...register("img")} />
-            <input type="submit" value="Add Item" />
+            <input className='w-50 d-block mx-auto mb-5' placeholder='Quantity' type="number" {...register("quantity")} />
+            <input className='w-50 d-block mx-auto mb-5' placeholder='Supplier' type="text" {...register("supplier")} />
+            <input className='w-50 d-block mx-auto mb-5' placeholder='Photo URL' type="text" {...register("img")} />
+            <input className='update-button w-25 d-block mx-auto' type="submit" value="Add Item" />
     </form>
         </div>
     );

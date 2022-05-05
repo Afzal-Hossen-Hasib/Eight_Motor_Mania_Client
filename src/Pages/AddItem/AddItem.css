@@ -1,0 +1,33 @@
+.add-cont input{
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    border: none;
+    padding: 5px;
+}
+
+.add-cont textarea {
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    border: none;
+    padding: 5px;
+}
+
+
+@media only screen and (max-width: 576px) {
+
+    .add-cont input {
+        width: 100% !important;
+    }
+
+    .add-cont textarea {
+        width: 100% !important;
+    }
+}
+
+@media only screen and (min-width: 577px) and (max-width: 992px) {
+    .add-cont input {
+        width: 100% !important;
+    }
+
+    .add-cont textarea {
+        width: 100% !important;
+    }
+}

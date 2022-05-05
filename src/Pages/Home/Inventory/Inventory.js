@@ -14,7 +14,7 @@ const Inventory = () => {
     return (
         <div> 
             <div className='container'>
-                <h1 className='text-center mt-5'>CHOOSE YOUR RIDING STYLE</h1>
+                <h1 className='title w-50 d-block mx-auto text-center mt-5'>CHOOSE YOUR RIDING STYLE</h1>
             <div className='inventory-section'>
             {
                 newInventory.map (inventories => {
@@ -23,10 +23,10 @@ const Inventory = () => {
                         <div key={inventories._id} className='inventory-item'>   
                             <img src={img} alt="" />
                             <h2>{name}</h2>
-                            <p>{price}</p>
-                            <p>{quantity}</p>
-                            <p>{desription}</p>
-                            <p>{supplier}</p>
+                            <p>Quantity: {quantity}</p>
+                            <p>Price: ${price}</p>
+                            <p>Details: {desription}</p>
+                            <p>Supplier: {supplier}</p>
                             <button className='update-button d-block mx-auto w-50' onClick={()=> handleUpdateInventory(_id)}>Update</button>
                         </div>
 

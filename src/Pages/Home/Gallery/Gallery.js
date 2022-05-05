@@ -13,24 +13,24 @@ const Gallery = () => {
                 </div>
 
                 <div className='image-card'>
-                    <div className="card card1 w-75">
-                        <h5>Helmet</h5>
-                        <p>Lorem ipsum dolor sit amet consectetur.</p>
+                    <div className="card card1 w-100">
+                        <h5 className='w-25 text-center'>HELMET</h5>
+                        <p className='w-50 text-center'>Choose Best One For You.</p>
                     </div>
-                    <div className="card card2 w-75">
-                        <h5>Jacket</h5>
-                        <p>Lorem ipsum dolor sit amet consectetur.</p>
+                    <div className="card card2 w-100">
+                        <h5 className='w-25 text-center'>JACKET</h5>
+                        <p className='w-50 text-center'>Choose Best One For You.</p>
                     </div>
-                    <div className="card card3 w-75">
-                        <h5>Hand Gloves</h5>
-                        <p>Lorem ipsum dolor sit amet consectetur.</p>
+                    <div className="card card3 w-100">
+                        <h5 className='w-50 text-center'>HAND GLOVES</h5>
+                        <p className='w-50 text-center'>Choose Best One For You.</p>
                     </div>
-                    <div className="card card4 w-75">
-                        <h5>Boot</h5>
-                        <p>Lorem ipsum dolor sit amet consectetur.</p>
+                    <div className="card card4 w-100">
+                        <h5 className='w-25 text-center'>BOOT</h5>
+                        <p className='w-50 text-center'>Choose Best One For You.</p>
                     </div>
                 </div>
-                <button className='mt-5 w-25 d-block mx-auto fs-5 update-button'>See More..</button>
+                <button className='mt-4 w-25 d-block mx-auto fs-5 update-button'>See More..</button>
                 </div>
                 
                 
