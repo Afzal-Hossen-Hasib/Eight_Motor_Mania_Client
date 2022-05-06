@@ -20,7 +20,7 @@ const UpdateInventory = () => {
         <div className="row">
             <div className="col-md-6">
                 <div className="left-row">
-                <img src={inventory.img} alt="" />
+                <img className="w-50 d-block mx-auto" src={inventory.img} alt="" />
                 <h2>{inventory.name}</h2>
                 <p>Quantity: {inventory.quantity}</p>
                 <p>Price: ${inventory.price}</p>

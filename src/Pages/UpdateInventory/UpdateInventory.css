@@ -12,7 +12,6 @@
 
 
 .left-row img {
-    width: 80%;
     transition: transform 0.5s;
 }
 
@@ -26,4 +25,16 @@
     border-radius: 10px;
     margin-bottom: 25px;
     transition: transform 0.5s;
+}
+
+@media only screen and (max-width: 576px) {
+    .left-row img {
+        width: 100% !important;
+    }
+}
+
+@media only screen and (min-width: 577px) and (max-width: 992px) {
+    .left-row img {
+        width: 100% !important;
+    }
 }

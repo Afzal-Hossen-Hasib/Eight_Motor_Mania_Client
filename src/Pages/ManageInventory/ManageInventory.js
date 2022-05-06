@@ -35,8 +35,8 @@ const ManageInventory = () => {
                 inventory.map(manage => {
                     const {name, price, img, desription, supplier, quantity, _id} = manage
                     return (
-                        <div key={manage._id} className='inventory-item'>
-                            <img src={img} alt="" />
+                        <div key={manage._id} className='inventory-item text-center'>
+                            <img className="w-75 d-block mx-auto" src={img} alt="" />
                             <h2>{name}</h2>
                             <p>Quantity: {quantity}</p>
                             <p>Price: ${price}</p>

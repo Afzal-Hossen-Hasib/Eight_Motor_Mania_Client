@@ -41,7 +41,7 @@ const MyItem = () => {
     
     return (
         <div>
-            <h1>My Item{myItem.length}</h1> 
+            <h1 className='text-center title w-50 d-block mx-auto text-center my-4'>My New Item {myItem.length}</h1> 
             <div className='container my-item'>
             {
                 myItem.map(manage => {

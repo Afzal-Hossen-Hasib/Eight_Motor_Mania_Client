@@ -20,8 +20,8 @@ const Inventory = () => {
                 newInventory.map (inventories => {
                     const {name, price, img, desription, supplier, quantity, _id} = inventories
                     return (
-                        <div key={inventories._id} className='inventory-item'>   
-                            <img src={img} alt="" />
+                        <div key={inventories._id} className='inventory-item text-center'>   
+                            <img className="w-75 d-block mx-auto" src={img} alt="" />
                             <h2>{name}</h2>
                             <p>Quantity: {quantity}</p>
                             <p>Price: ${price}</p>
