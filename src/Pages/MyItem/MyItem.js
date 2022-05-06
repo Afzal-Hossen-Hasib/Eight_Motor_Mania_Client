@@ -11,14 +11,18 @@ const MyItem = () => {
 
     useEffect (() => {
         const getNewItem = async() => {
-        const url = `http://localhost:5000/myitem`;
+        const email = user?.email;
+        const url = `http://localhost:5000/myitem?email=${email}`;
+        console.log(url);
         const {data} = await axios.get(url);
+        console.log(data);
         setMyItem(data);
         }
         getNewItem();
     } ,[user]);
 
     const handleDelete = id => {
+        console.log(id);
         const procced = window.confirm('Are You Sure?')
 
         if (procced) {
