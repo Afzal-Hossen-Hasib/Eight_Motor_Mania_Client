@@ -17,15 +17,18 @@ const UpdateInventory = () => {
 
   return (
     <div className="container">
+        <h2 className="text-center title w-50 d-block mx-auto text-center my-4">Delivaerd And Update Stock</h2>
         <div className="row">
             <div className="col-md-6">
-                <div className="left-row">
+                <div className="left-row text-center">
                 <img className="w-50 d-block mx-auto" src={inventory.img} alt="" />
-                <h2>{inventory.name}</h2>
-                <p>Quantity: {inventory.quantity}</p>
-                <p>Price: ${inventory.price}</p>
-                <p>Details: {inventory.desription}</p>
-                <p>Supplier: {inventory.supplier}</p>
+                <h2 className='fw-bold'>{inventory.name}</h2>
+                <p className='fs-5 fw-bold text-danger'>Quantity: <span className='text-muted'>{inventory.quantity}</span> 
+                <button className="update-button ms-3">Stock Update</button>
+                </p>
+                <p className='fs-5 fw-bold text-danger'>Price: <span className='text-muted'>${inventory.price}</span></p>
+                <p className='fs-6 fw-bold px-2'>Details: <span className='text-muted'>{inventory.desription}</span></p>
+                <p className='fs-5 fw-bold'>Supplier: <span className='text-muted'>{inventory.supplier}</span></p>
                 <button className='delete-button d-block fs-6 mx-auto w-50'>Delivered</button>
                 </div>
             </div>

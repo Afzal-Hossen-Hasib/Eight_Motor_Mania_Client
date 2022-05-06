@@ -7,3 +7,20 @@
 .my-item img{
     width: 100%;
 }
+
+
+@media only screen and (max-width: 576px) {
+    .my-item {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .inventory-item {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 577px) and (max-width: 992px) {
+    .my-item {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

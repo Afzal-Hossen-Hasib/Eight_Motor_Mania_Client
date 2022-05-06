@@ -37,17 +37,17 @@ const ManageInventory = () => {
                     return (
                         <div key={manage._id} className='inventory-item text-center'>
                             <img className="w-75 d-block mx-auto" src={img} alt="" />
-                            <h2>{name}</h2>
-                            <p>Quantity: {quantity}</p>
-                            <p>Price: ${price}</p>
-                            <p>Details: {desription}</p>
-                            <p>Supplier: {supplier}</p>
+                            <h2 className='fw-bold'>{name}</h2>
+                            <p className='fs-5 fw-bold text-danger'>Quantity: <span className='text-muted'>{quantity}</span></p>
+                            <p className='fs-5 fw-bold text-danger'>Price: <span className='text-muted'>${price}</span></p>
+                            <p className='fs-6 fw-bold px-2'>Details: <span className='fs-6 text-muted'>{desription}</span></p>
+                            <p className='fs-5 fw-bold'>Supplier: <span className='text-muted'>{supplier}</span></p>
                             <div className='ps-5'>
-                            <button className='update-button' onClick={()=> handleInventory(_id)}>Update</button>
+                            <button className='update-button me-3' onClick={()=> handleInventory(_id)}>Update</button>
 
                             <button
                             onClick={() => handleDelete(manage._id)} 
-                            className='ms-3 delete-button'>
+                            className='delete-button'>
                                 Delete
                             </button>
                             </div>
