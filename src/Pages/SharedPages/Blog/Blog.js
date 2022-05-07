@@ -15,8 +15,12 @@ const Blog = () => {
       </div>
 
       <div className="qna-section">
-          <h3>When should you use nodejs and when should you use mongodb? <hr /></h3>
-          <p><span>ANSWER:</span> Node.js is a Javascript-based environment that is easily understood by most of the browsers. Here, the Javascript is Server-Side instead of serving client-side. Node.js is definitely fast and it allows to explore a dynamic range of data at real-time. It allows code sharing. Node.js acts as a proxy server and allows seamless real-time data streaming. The most important reason for the rising popularity of Node.js is that the programmer can code the server-side as well as client-side using it. Node.js is an interpreted, familiar and flexible language.</p>
+          <h3>When should you use nodejs And <br /> when should you use mongodb? <hr /></h3>
+
+          <p> <span>ANSWER: NodeJs:</span> Node.js is a Javascript-based environment that is easily understood by most of the browsers. Here, the Javascript is Server-Side instead of serving client-side. Node.js is definitely fast and it allows to explore a dynamic range of data at real-time. It allows code sharing. Node.js acts as a proxy server and allows seamless real-time data streaming. The most important reason for the rising popularity of Node.js is that the programmer can code the server-side as well as client-side using it. Node.js is an interpreted, familiar and flexible language.</p>
+
+          <p> <span>MongoDB:</span> As it is a NoSQL database, that’s why it has many reasons to learn MongoDB. These reasons have led the foundation to the worldwide popularity of MongoDB. MongoDB is a document database used to build highly available and scalable internet applications. With its flexible schema approach, it’s popular with development teams using agile methodologies. It performs operations like filtering the data and then performing sorting on that dataset. It performs the operation of summarizing all the data after the map operation. It does not require data structures, that are unified in nature across all the objects that are being used. This makes it easier to use MongoDB.
+        </p>
       </div>
 
       <div className="qna-section">

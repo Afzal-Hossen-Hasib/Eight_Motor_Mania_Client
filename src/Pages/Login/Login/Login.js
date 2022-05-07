@@ -35,13 +35,13 @@ const Login = () => {
   }
 
   if (user) {
-    // navigate(from, { replace: true });
+    navigate(from, { replace: true });
   }
 
   if (error) {
         
     errorHandle = <div>
-        <p className='text-danger'>Error: {error?.message}</p>
+        <p className='text-danger text-center'>{error?.message}</p>
       </div>
   };
 
@@ -54,7 +54,6 @@ const Login = () => {
     const {data} = await axios.post('http://localhost:5000/login', {email});
     console.log(data);
     localStorage.setItem('jwtToken', data.jwtToken); 
-    navigate(from, { replace: true });
   }
 
   const navigateRegister = event => {
