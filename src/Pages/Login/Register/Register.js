@@ -1,11 +1,12 @@
 import React, { useRef, useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import icon from '../../../Images/icon/01.png'
 import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 import SocialLogin from '../SocialLogin/SocialLogin';
 import Loading from '../../SharedPages/Loading/Loading';
+import axios from 'axios';
 
 const Register = () => {
 
@@ -14,6 +15,9 @@ const Register = () => {
         const emailRef = useRef('');
         const passwordRef = useRef ('');
         const navigate = useNavigate();
+        const location = useLocation();
+
+        let from = location.state?.from?.pathname || "/";
 
         const [
             createUserWithEmailAndPassword,
@@ -40,8 +44,11 @@ const Register = () => {
 
             await createUserWithEmailAndPassword(email, password);
             await updateProfile({ displayName: name });
+            const {data} = await axios.post('http://localhost:5000/login', {email});
+            console.log(data);
+            localStorage.setItem('jwtToken', data.jwtToken); 
             console.log('Updated profile');
-            navigate('/home');
+            navigate(from, { replace: true });
         };
 
        const handleLogin = () => {
