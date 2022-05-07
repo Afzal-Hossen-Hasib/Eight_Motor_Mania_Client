@@ -15,6 +15,8 @@ const UpdateInventory = () => {
       .then((data) => setInventory(data));
   }, []);
 
+  
+
   return (
     <div className="container">
         <h2 className="text-center title w-50 d-block mx-auto text-center my-4">Delivaerd And Update Stock</h2>

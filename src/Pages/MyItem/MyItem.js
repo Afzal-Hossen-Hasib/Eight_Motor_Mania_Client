@@ -3,20 +3,35 @@ import axios from 'axios';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import './MyItem.css'
+import { useNavigate } from 'react-router-dom';
+import { signOut } from 'firebase/auth';
 
 const MyItem = () => {
 
     const [user] = useAuthState(auth); 
     const [myItem, setMyItem] = useState ([]);
+    const navigate = useNavigate();
 
     useEffect (() => {
         const getNewItem = async() => {
         const email = user?.email;
         const url = `http://localhost:5000/myitem?email=${email}`;
-        console.log(url);
-        const {data} = await axios.get(url);
-        console.log(data);
-        setMyItem(data);
+            try {
+                const {data} = await axios.get(url, {
+                    headers: {
+                        authorization: `Bearer ${localStorage.getItem('jwtToken')}`
+                    }
+                });
+                console.log(data);
+                setMyItem(data);
+            }
+            catch (error) {
+                console.log(error.message);
+                if (error.response.status === 401 || error.response.status === 403) {
+                    signOut(auth);
+                    navigate('/login')
+                }
+            }
         }
         getNewItem();
     } ,[user]);
@@ -41,7 +56,7 @@ const MyItem = () => {
     
     return (
         <div>
-            <h1 className='text-center title w-50 d-block mx-auto text-center my-4'>My New Item {myItem.length}</h1> 
+            <h1 className='text-center title w-50 d-block mx-auto text-center my-4'>My New Item</h1> 
             <div className='container my-item'>
             {
                 myItem.map(manage => {

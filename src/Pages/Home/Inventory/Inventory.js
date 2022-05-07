@@ -15,7 +15,7 @@ const Inventory = () => {
         <div> 
             <div className='container'>
                 <h1 className='title w-50 d-block mx-auto text-center mt-5'>CHOOSE YOUR RIDING STYLE</h1>
-            <div className='inventory-section'>
+            <div className='inventory-section'> 
             {
                 newInventory.map (inventories => {
                     const {name, price, img, desription, supplier, quantity, _id} = inventories
