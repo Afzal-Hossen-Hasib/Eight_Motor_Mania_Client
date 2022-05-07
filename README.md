@@ -10,6 +10,7 @@
 ### • Create Two Extra Section.
 ### • Use JWT Token Access.
 ### • Make Website Responsive For Mobile And Tablet.
+### • Set Environment Variables For Client And Server Side.
 
 
 ## Frameworks And Libraries
