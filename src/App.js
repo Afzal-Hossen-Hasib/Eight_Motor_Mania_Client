@@ -35,11 +35,6 @@ function App() {
             <ManageInventory></ManageInventory>
           </PrivateRoute>
         }></Route>
-        <Route path='/manageitem' element={
-          <PrivateRoute>
-            <ManageItem></ManageItem>
-          </PrivateRoute>
-        }></Route>
         <Route path='/myitem' element={
           <PrivateRoute>
             <MyItem></MyItem>

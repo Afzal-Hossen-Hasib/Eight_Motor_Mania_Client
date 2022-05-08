@@ -19,21 +19,21 @@
     transform: scale(.9);
 }
 
-.right-row {
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    padding: 5px;
-    border-radius: 10px;
-    margin-bottom: 25px;
-    transition: transform 0.5s;
-}
-
 @media only screen and (max-width: 576px) {
+    .left-row {
+        width: 100% !important;
+    }
+    
     .left-row img {
         width: 100% !important;
     }
 }
 
 @media only screen and (min-width: 577px) and (max-width: 992px) {
+    .left-row {
+        width: 100% !important;
+    }
+    
     .left-row img {
         width: 100% !important;
     }
