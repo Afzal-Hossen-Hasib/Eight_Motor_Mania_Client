@@ -15,7 +15,7 @@ const AddItem = () => {
     const onSubmit = data => {
       console.log(data)
 
-      const url = `http://localhost:5000/inventory`;
+      const url = `https://lit-stream-45073.herokuapp.com/inventory`;
       console.log(url);
       fetch (url, {
         method: 'POST',
@@ -29,7 +29,7 @@ const AddItem = () => {
         console.log(result);
       });
 
-      axios.post('http://localhost:5000/myitem', data)
+      axios.post('https://lit-stream-45073.herokuapp.com/myitem', data)
       .then (response => {
         const {data} = response;
         if (data.insertedId) {

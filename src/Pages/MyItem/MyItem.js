@@ -15,7 +15,7 @@ const MyItem = () => {
     useEffect (() => {
         const getNewItem = async() => {
         const email = user?.email;
-        const url = `http://localhost:5000/myitem?email=${email}`;
+        const url = `https://lit-stream-45073.herokuapp.com/myitem?email=${email}`;
             try {
                 const {data} = await axios.get(url, {
                     headers: {
@@ -40,7 +40,7 @@ const MyItem = () => {
         const procced = window.confirm('Are You Sure?')
 
         if (procced) {
-            const url = `http://localhost:5000/myitem/${id}`;
+            const url = `https://lit-stream-45073.herokuapp.com/myitem/${id}`;
             fetch (url, {
                 method: 'DELETE'
             })

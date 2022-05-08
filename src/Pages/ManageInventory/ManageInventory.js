@@ -14,7 +14,7 @@ const ManageInventory = () => {
             const procced = window.confirm('Are You Sure?')
 
             if (procced) {
-                const url = `http://localhost:5000/inventory/${id}`;
+                const url = `https://lit-stream-45073.herokuapp.com/inventory/${id}`;
                 fetch (url, {
                     method: 'DELETE'
                 })

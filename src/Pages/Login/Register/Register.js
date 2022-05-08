@@ -44,7 +44,7 @@ const Register = () => {
 
             await createUserWithEmailAndPassword(email, password);
             await updateProfile({ displayName: name });
-            const {data} = await axios.post('http://localhost:5000/login', {email});
+            const {data} = await axios.post('https://lit-stream-45073.herokuapp.com/login', {email});
             console.log(data);
             localStorage.setItem('jwtToken', data.jwtToken); 
             console.log('Updated profile');

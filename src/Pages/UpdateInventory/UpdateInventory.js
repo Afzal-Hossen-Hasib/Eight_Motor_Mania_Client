@@ -8,7 +8,7 @@ const UpdateInventory = () => {
   const [inventory, setInventory] = useState({});
 
   useEffect(() => {
-    const url = `http://localhost:5000/inventory/${id}`;
+    const url = `https://lit-stream-45073.herokuapp.com/inventory/${id}`;
 
     fetch(url)
       .then((res) => res.json())
@@ -23,7 +23,7 @@ const UpdateInventory = () => {
       const newQuantity = {quantity: quantityString, ...rest};
       setInventory(newQuantity);
   
-      const url = `http://localhost:5000/inventory/${id}`
+      const url = `https://lit-stream-45073.herokuapp.com/inventory/${id}`
       fetch (url, {
       method: 'PUT',
       headers: {
@@ -56,7 +56,7 @@ const UpdateInventory = () => {
       const newQuantity = {quantity: quantityString, ...rest};
       setInventory(newQuantity);
   
-      const url = `http://localhost:5000/inventory/${id}`
+      const url = `https://lit-stream-45073.herokuapp.com/inventory/${id}`
       fetch (url, {
       method: 'PUT',
       headers: {
