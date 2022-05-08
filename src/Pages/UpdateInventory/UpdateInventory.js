@@ -21,7 +21,6 @@ const UpdateInventory = () => {
       const quantity1 = parseInt(inventory.quantity) - 1;
       const quantityString = quantity1.toString();
       const newQuantity = {quantity: quantityString, ...rest};
-      console.log(newQuantity);
       setInventory(newQuantity);
   
       const url = `http://localhost:5000/inventory/${id}`

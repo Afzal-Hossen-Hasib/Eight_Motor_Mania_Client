@@ -22,7 +22,6 @@ const MyItem = () => {
                         authorization: `Bearer ${localStorage.getItem('jwtToken')}`
                     }
                 });
-                console.log(data);
                 setMyItem(data);
             }
             catch (error) {

@@ -49,15 +49,6 @@ function App() {
      </Routes>
      <Footer></Footer>
      <ToastContainer />
-
-
-      {/* <p>
-      driving a motorrcycle is like flying
-
-Find the Best Motorbike Parts For Your Vehicle
-
-motor mania
-      </p> */}
     </div>
   );
 }

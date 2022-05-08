@@ -56,9 +56,9 @@ const ManageInventory = () => {
                 })
             }
             </div>
-            <div className='manage-button'>
-            <Link to='/additem'>Add New Item</Link>
-            </div>
+                <div className='manage-button'>
+                    <Link to='/additem'>Add New Item</Link>
+                </div>
         </div>
     );
 };
